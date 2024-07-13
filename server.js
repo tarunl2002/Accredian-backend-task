@@ -1,11 +1,13 @@
 const express = require('express');
+const cors = require('cors');
+
 const bodyParser = require('body-parser');
 const { PrismaClient } = require('@prisma/client');
 const nodemailer = require('nodemailer');
 
 const prisma = new PrismaClient();
 const app = express();
-
+app.use(cors()); 
 app.use(bodyParser.json());
 
 app.post('/api/referrals', async (req, res) => {
