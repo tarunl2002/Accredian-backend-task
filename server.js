@@ -38,7 +38,7 @@ app.post('/api/referrals', async (req, res) => {
 
     const mailOptions = {
       from: 'tarun2110101@akgec.ac.in',
-      to: 'tarunlalwani2002@gmail.com',
+      to: friendEmail,
       subject: 'Course Referral',
       text: `${referrerName} has referred you to a course!`,
     };
